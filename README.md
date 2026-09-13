@@ -51,6 +51,12 @@ You can find the **IP Address** and **Access Code** in the printer’s network s
 - [Find your printer's Access Code](https://intercom.help/octoeverywhere/en/articles/9028357-find-your-bambu-lab-printer-access-code)
 - [Find your printer's Serial Number](https://wiki.bambulab.com/en/general/find-sn)
 
+### Developer Mode on newer firmware
+
+Bambu Lab's updated LAN security model includes an optional **Developer Mode** for advanced users of X1, P1, A1, and A1 Mini printers. When enabled manually on the printer, Developer Mode leaves the MQTT channel, live stream, and FTP available for direct third-party integrations. Because this library connects directly over MQTT and FTP, enable Developer Mode if your printer's firmware requires it for local third-party access.
+
+Developer Mode makes you responsible for securing the printer on your local network, and Bambu Lab does not provide customer support for the unofficial communication protocols exposed by this mode. Keep the printer on a trusted LAN and do not expose these services directly to the internet. See Bambu Lab's official announcement, [Updates and Third-Party Integration with Bambu Connect](https://blog.bambulab.com/updates-and-third-party-integration-with-bambu-connect/), for details.
+
 ## Quickstart
 For a quickstart guide, please see [quickstart.md](docs/quickstart.md).
 
